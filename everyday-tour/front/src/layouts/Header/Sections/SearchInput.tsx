@@ -1,5 +1,5 @@
 import React from 'react'
-import IconSearch from '../../../assets/icons/icon_search.svg'
+import iconSearch from '../../../assets/icons/icon_search.svg'
 import styled from 'styled-components'
 
 const SearchInput = () => {
@@ -8,7 +8,7 @@ const SearchInput = () => {
       <InputSearch
       type="text"
       placeholder='검색어를 입력해 주세요.'/>
-      <img src={IconSearch} alt="search"/>
+      <img src={iconSearch} alt="search"/>
     </SearchWrapper>
   )
 }
