@@ -23,6 +23,7 @@ const PopularSearch = () => {
     <PopularSearchWrapper>
       <TitleText>인기 검색어</TitleText>
       <SwiperStyle
+      loop={true}
       slidesPerView={'auto'}
       centeredSlides={true}
       autoHeight={true}
@@ -32,8 +33,6 @@ const PopularSearch = () => {
         disableOnInteraction: false,
       }}
       spaceBetween={30}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
       modules={[Autoplay]}
     >
       {searchList.map((place)=>(
