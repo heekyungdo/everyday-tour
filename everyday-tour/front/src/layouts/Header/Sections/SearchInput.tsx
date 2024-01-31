@@ -4,18 +4,11 @@ import styled from 'styled-components'
 
 const SearchInput = () => {
   const [clickSearch, setClickSearch] = useState(false)
-  const inputRef = useRef<HTMLInputElement>(null);
   const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
 
   }
 
-  const handleClick = () => {
-    // if (inputRef.current !== null) {
-    //   inputRef.current.disabled ? setClickSearch(false)
-    //   inputRef.current.focus() ? setClickSearch(true)
-    // }
-    setClickSearch(!clickSearch)
-  }
+ 
 
 
   return (
@@ -28,8 +21,8 @@ const SearchInput = () => {
            type="text"
            placeholder='검색어를 입력해 주세요.'
            onChange={handleChange}
-           onClick={handleClick}
-           ref={inputRef}
+           onFocus={() => setClickSearch(true)}
+           onBlur={() => setClickSearch(false)}
            />
       </Inputwrapper>
       <SearchImg src={iconSearch} alt="search"/>
