@@ -4,6 +4,8 @@ import LogoImg from '../../assets/logo.png'
 import SearchInput from './Sections/SearchInput'
 import PopularSearch from './Sections/PopularSearch'
 import SystemMenus from './Sections/SystemMenus'
+import { FiAlignJustify } from "react-icons/fi";
+
 const Header = () => {
   return (
     <HeaderWrapper>
@@ -15,7 +17,14 @@ const Header = () => {
         <PopularSearch />
         <SystemMenus />
       </MenuWrapper>
-      <div></div>
+      <div>
+        <div>
+      <FiAlignJustify />
+        </div>
+        <div>
+          
+        </div>
+      </div>
     </HeaderWrapper>
   )
 }
@@ -23,8 +32,8 @@ const Header = () => {
 export default Header
 
 const HeaderWrapper = styled.div`
-    padding:0 20px;
-     height:45px;
+    padding:5px 20px;
+    height:45px;
 `
 const MenuWrapper = styled.div`
     display:flex;
