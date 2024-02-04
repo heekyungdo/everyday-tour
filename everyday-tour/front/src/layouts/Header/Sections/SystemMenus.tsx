@@ -10,7 +10,7 @@ const routes = [
  {to:'/notification', name:'알림', icon:<BsBell size="20"/>},
  {to:'/mypage', name:'마이페이지', icon:<VscAccount size="20"/>},
  {to:'/reservation', name:'예약내역', icon:<BsCalendar2Check size="20"/>},
- {to:'/logout', name:'로그아웃', icon:<CgLogOut size="20"/>},
+ {to:'', name:'로그아웃', icon:<CgLogOut size="20"/>},
 ]
 
 const SystemMenus = () => {
