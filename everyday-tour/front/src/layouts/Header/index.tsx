@@ -52,7 +52,11 @@ const Header = () => {
 export default Header
 
 const HeaderWrapper = styled.div`
-    padding:5px 20px;
+    max-width: 1280px;
+    width:100%;
+    // max-width: 1420px;
+    padding: 5px 50px;
+    margin: 0 auto;
     height:45px;
 `
 const MenuWrapper = styled.div`

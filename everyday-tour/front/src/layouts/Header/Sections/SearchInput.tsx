@@ -8,9 +8,6 @@ const SearchInput = () => {
 
   }
 
- 
-
-
   return (
     <SearchWrapper>
       <Inputwrapper

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import styled from 'styled-components'
 import './App.css'
 import { Outlet, Route, Routes } from 'react-router-dom'
 import LandingPage from './pages/LandingPage'
@@ -9,9 +10,9 @@ function Layout() {
   return (
   <div>
     <Header />
-    <main>
+    <Main>
       <Outlet />
-    </main>
+    </Main>
     <Footer />
   </div>
   )
@@ -30,3 +31,7 @@ function App() {
 }
 
 export default App
+
+const Main = styled.div`
+  width:100%;
+`
