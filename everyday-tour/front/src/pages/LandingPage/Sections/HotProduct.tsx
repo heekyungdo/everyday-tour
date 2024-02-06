@@ -3,17 +3,18 @@ import styled from 'styled-components'
 import 나트랑 from '../../../assets/images/나트랑.jpeg';
 import 홍콩 from '../../../assets/images/홍콩.jpeg';
 import 스페인 from '../../../assets/images/스페인.jpeg';
-
+// import {isComma} from '../../../utils/common.js';
 
 const countries = [
-  {id:2, country:'나트랑', image:나트랑, title:'나트랑+달랏 4/5일', hash:'#동양의 나폴리#나트랑#달랏', price:399900},
-  {id:3, country:'스페인', image:스페인, title:'스페인 | 포르투갈 일주', hash: '#가우디#피카소의 위대한 유산', price:1999000},
-  {id:5, country:'홍콩', image:홍콩, title:'[한번에 두곳을]마카오+홍콩 4/5일', hash: '#빅토리아피크 야경#마카오 세계문화 여행', price:649900},
+  {id:1, country:'나트랑', image:나트랑, title:'나트랑+달랏 4/5일', hash:'#동양의 나폴리#나트랑#달랏', price:399900},
+  {id:2, country:'스페인', image:스페인, title:'스페인 | 포르투갈 일주', hash: '#가우디#피카소의 위대한 유산', price:1999000},
+  {id:3, country:'홍콩', image:홍콩, title:'[한번에 두곳을]마카오+홍콩 4/5일', hash: '#빅토리아피크 야경#마카오 세계문화 여행', price:649900},
 ]
 
 const setComma = (price:number) => {
  return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+};
+
 const HotProduct = () => {
   return (
     <HotProductWrapper>
@@ -21,7 +22,7 @@ const HotProduct = () => {
       <Title>지금 주목할 여행상품</Title>
       <ProductList>
       {countries.map(country=>(
-          <ImageCard>
+          <ImageCard key={country.id}>
             <div>
               <Image>
             <img src={country.image} alt={country.country}/>
@@ -61,26 +62,25 @@ const Title = styled.p`
 
 const ProductList = styled.div`
 display:grid;
-place-items: space-between;
+grid-gap:30px;
 grid-template-columns: repeat(3,1fr);
-max-width:1200px;
-margin:0 auto;
 margin-top:100px;
 `
+
 const ImageCard = styled.div`
 position:relative;
-max-width:1130px;
-margin:0 auto;
+cursor:pointer;
 `
 
 const Image = styled.div`
    img {
     border-radius:10px;
-    width:350px;
-    min-height:380px;
+    width:370px;
+    min-height:430px;
     object-fit:cover;
    }
 `
+
 const TextCard = styled.div`
    position:absolute;
    top:70%;
@@ -118,10 +118,10 @@ const HashTag = styled.p`
 
 const Price = styled.div`
    font-size:20px;
-  font-weight:900;
    text-align:right;
  span {
   font-size:22px;
+  font-weight:900;
   color:#000000D9;
  }
 `
