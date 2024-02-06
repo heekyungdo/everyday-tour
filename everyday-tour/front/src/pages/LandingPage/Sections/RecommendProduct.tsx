@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+import { useSwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 다낭 from '../../../assets/images/다낭.jpeg'
@@ -27,9 +28,12 @@ const setComma = (price:number) => {
  };
  
 const RecommenProduct = () => {
+  const swiperSlide = useSwiperSlide();
+
   return (
     <Wrapper>
         <Title>모두의 추천상품</Title>
+        <div className="swiper-prev" />
         <SwiperStyle
       spaceBetween={10}
       slidesPerView={2.5}
@@ -55,6 +59,7 @@ const RecommenProduct = () => {
       </SwiperSlide>
       ))}
       </ProductList>
+      <div className="swiper-next" />
     </SwiperStyle>
     </Wrapper>
   )
@@ -73,9 +78,30 @@ const Title = styled.p`
 `
 
 const SwiperStyle = styled(Swiper)`
- padding:0 5px;
+ padding:0 5px; 
+ .swiper-button-next {
+  border:1px solid #888888;
+  background:#ffff;
+  color:#888888;
+  padding: 8px 13px!important;
+  width:unset;
+  height:unset;
+  &:after{
+      font-size:18px;
+  }
+ }
+ .swiper-button-prev {
+  border:1px solid #888888;
+  background:#ffff;
+  color:#888888;
+  padding: 8px 13px!important;
+  width:unset;
+  height:unset;
+  &:after{
+      font-size:18px;
+  }
+}
 `
-
 const ProductList = styled.div`
 display:flex;
 column-gap:30px;
