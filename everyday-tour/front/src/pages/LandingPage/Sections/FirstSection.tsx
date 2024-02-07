@@ -27,7 +27,7 @@ const setComma = (price:number) => {
   return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
  };
  
-const RecommenProduct = () => {
+const FirstSection = () => {
   const swiperSlide = useSwiperSlide();
 
   return (
@@ -53,8 +53,8 @@ const RecommenProduct = () => {
                     <ProductTitle>{country.title}</ProductTitle>
                     <HashTag>{country.hash}</HashTag>
                     <Price><span>{setComma(country.price)}</span>원{" "}~</Price>
-                    </TextInner>
-                  </TextCard>
+        </TextInner>
+      </TextCard>
     </ImageCard>
       </SwiperSlide>
       ))}
@@ -65,7 +65,7 @@ const RecommenProduct = () => {
   )
 }
 
-export default RecommenProduct
+export default FirstSection
 
 const Wrapper = styled.div`
 max-width: 1280px;
@@ -100,7 +100,12 @@ const SwiperStyle = styled(Swiper)`
   &:after{
       font-size:18px;
   }
-}
+ }
+ .swiper-button-disabled,
+ .swiper-button-disabled {
+   stroke: #555;
+   cursor: unset;
+ }
 `
 const ProductList = styled.div`
 display:flex;

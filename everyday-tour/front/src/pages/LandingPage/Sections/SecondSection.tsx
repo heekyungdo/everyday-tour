@@ -15,9 +15,9 @@ const setComma = (price:number) => {
  return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
 
-const HotProduct = () => {
+const SecondSection = () => {
   return (
-    <HotProductWrapper>
+    <Wrapper>
       <InnerContent>
       <Title>지금 주목할 여행상품</Title>
       <ProductList>
@@ -39,13 +39,13 @@ const HotProduct = () => {
           ))}
         </ProductList>
         </InnerContent>
-    </HotProductWrapper>
+    </Wrapper>
   )
 }
 
-export default HotProduct
+export default SecondSection
 
-const HotProductWrapper = styled.div`
+const Wrapper = styled.div`
  background:#f8f8f8;
  padding:90px 0 200px;
 `

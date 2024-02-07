@@ -2,8 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import Banner from './Sections/Banner'
 import Search from './Sections/Search'
-import RecommenProduct from './Sections/RecommendProduct'
-import HotProduct from './Sections/HotProduct'
+import FirstSection from './Sections/FirstSection'
+import SecondSection from './Sections/SecondSection'
+import ThirdSection from './Sections/ThirdSection'
 
 const LandingPage = () => {
   return (
@@ -11,8 +12,9 @@ const LandingPage = () => {
       {/* <Banner/> */}
       <Main>
         <Search/>
-        <RecommenProduct/>
-        <HotProduct/>
+        <FirstSection/>
+        <SecondSection/>
+        <ThirdSection/>
       </Main>
     </MainWrapper>
   )
