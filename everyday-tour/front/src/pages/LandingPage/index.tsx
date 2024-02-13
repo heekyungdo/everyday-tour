@@ -5,6 +5,8 @@ import Search from './Sections/Search'
 import FirstSection from './Sections/FirstSection'
 import SecondSection from './Sections/SecondSection'
 import ThirdSection from './Sections/ThirdSection'
+import FourthSection from './Sections/FourthSection'
+import FifthSection from './Sections/FifthSection'
 
 const LandingPage = () => {
   return (
@@ -15,6 +17,8 @@ const LandingPage = () => {
         <FirstSection/>
         <SecondSection/>
         <ThirdSection/>
+        <FourthSection/>
+        <FifthSection/>
       </Main>
     </MainWrapper>
   )

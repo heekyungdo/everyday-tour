@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import { useSwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 다낭 from '../../../assets/images/다낭.jpeg'
@@ -23,12 +22,11 @@ const countries = [
   {id:8, category:'해외여행',   country:'코타키나발루', image:코타키나발루, title:'[설특가] 코타키나발루 수트라하버퍼시픽 5일', hash: '#가서빙#호핑투어#씨티투어#선셋나이트투어', price:944000}
 ]
 
-const setComma = (price:number) => {
+const setComma = (price:number):string => {
   return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
  };
  
 const FirstSection = () => {
-  const swiperSlide = useSwiperSlide();
 
   return (
     <Wrapper>
